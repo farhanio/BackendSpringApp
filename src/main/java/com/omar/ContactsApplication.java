@@ -26,11 +26,15 @@ public class ContactsApplication implements CommandLineRunner{
 	public void run(String... arg0) throws Exception {
 		DateFormat df = new SimpleDateFormat("dd/MM/yyyy");
 		contactRepository.save(new Contact("Omar", "Farhani", new Date() , "omar@farhani.com", 	50734889, ""));
-		
 		contactRepository.save(new Contact("Sonia", "Chikhoui", df.parse("01/01/1999") , "omalo@farhani.com", 	50734889, ""));
-		
-		contactRepository.save(new Contact("Elite", "Book", df.parse("01/01/2015") , "farha@farhani.com", 	12345678, ""));
-		
+		contactRepository.save(new Contact("Elite", "Book", df.parse("01/01/2015") , "farha@farhani.com", 	12345678, ""));	
+		contactRepository.save(new Contact("Elite", "yess", df.parse("01/01/2015") , "farha@farhani.com", 	12345678, ""));
+		contactRepository.save(new Contact("okok", "lombock", df.parse("01/01/2015") , "farha@farhani.com", 	12345678, ""));
+		contactRepository.save(new Contact("jijji", "rockstar", df.parse("01/01/2015") , "farha@farhani.com", 	12345678, ""));
+		contactRepository.save(new Contact("dodo", "podstar", df.parse("01/01/2015") , "farha@farhani.com", 	12345678, ""));
+		contactRepository.save(new Contact("cc cc", "ipod", df.parse("01/01/2015") , "farha@farhani.com", 	12345678, ""));
+		contactRepository.save(new Contact("Heart", "disease", df.parse("01/01/2015") , "farha@farhani.com", 	12345678, ""));
+ 
 		contactRepository.findAll().forEach(c->{
 			
 			System.out.println(c.getNom()+"  "+c.getPrenom()+"  "+c.getDateNaissance());
